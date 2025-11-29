@@ -1,12 +1,102 @@
-// CConsoleApplication.c : file nay chua 'main' function. 
+﻿// CConsoleApplication.c : file nay chua 'main' function. 
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
 #include <stdio.h>
 
+void kiemTraSoNguyen()
+{
+	printf("Kiem Tra So Nguyen");
+	printf("\n");
+}
+
+void lapChucNang(int chonChucNang)
+{
+	int tiepTuc = 1;
+	while (tiepTuc == 1)
+	{
+		switch (chonChucNang)
+		{
+		case 1:
+			kiemTraSoNguyen();
+			break;
+		case 2:
+			sapXep();
+			break;
+		case 3:
+			// ham goi chuc nang 3
+			break;
+		default:
+			printf("Chon sai. Chuc nang hop le [0-3]");
+			break;
+		}
+
+		printf("Tiep tuc thuc hien chuc nang nay? [1=Co | 0=Khong]: ");
+		scanf("%d", &tiepTuc);
+		system("cls");
+	}
+
+}
+
+void sapXep()
+{ 
+	int integerArray[100];
+	int length;
+	int tmp;
+	printf("nhap kich thuoc mang: ");
+	scanf("%d", length);
+	printf("nhao du lieu cho mang %d phan tu\n", length);
+		for (int i = 0; 1 < length; i++)
+	{
+			printf("mang[%d] = ", &i);
+			scanf("%d", &integerArray[i]);
+	}
+		printf("Du lieu phan tu mang %d phan tu\n"), length;
+		for (int i = 0; 1 < length; i++)
+		{
+			printf("mang [%d] = ", i);
+			scanf("mang[%d] = %d\n", i, integerArray[i]);
+		}
+		printf("Săp xep TAng dan tu du lieu mang %d phan thi\n", length);
+		for (int i = 0; i < length; i++)
+		{
+			if (integerArray[1] > integerArray[i + 1])
+			{
+				tmp = integerArray[1];
+				integerArray[i] = integerArray[i + 1];
+				integerArray[i + 1] = tmp;
+			}
+		}
+		printf("xuat du lieu mang %d phan tu\n", length);
+		for ( int i = 0 ; i < length; i++)
+		{
+			printf("mang[%d] = %d\n", i, integerArray[i]);
+		}
+}
+
 int main()
 {
-    printf("Hi there!\n");
+	int chonChucNang;
+	do
+	{
+		printf("Menu");
+		printf("\n");
+		printf("1. Kiem Tra So Nguyen");
+		printf("\n");
+		printf("2. sap Xep phan Tu Mang");
+		printf("\n");
+		printf("3. TEN chuc nang 3");
+		printf("\n");
+		printf("0. Thoat");
+		printf("\n");
+		printf("Hay chon chuc nang [0-3]: ");
+		scanf("%d", &chonChucNang);
+		lapChucNang(chonChucNang);
+	} while (chonChucNang != 0);
 }
+
+
+// GV: AnhTT184
+
 
 // Debug/Run chuong trinh: bam "F5" hoac "Debug > Start Debugging" tren menu
 
