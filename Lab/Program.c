@@ -1,12 +1,36 @@
-// CConsoleApplication.c : file nay chua 'main' function. 
+﻿// CConsoleApplication.c : file nay chua 'main' function. 
 // Chuong trinh phan mem Bat dau thuc thi & Ket thuc o day.
 
+#include <stdio.h>
 #include <stdio.h>
 
 int main()
 {
-    printf("Hi there!\n");
+    int n;
+    printf("Nhap so phan tu cua mang: ");
+    scanf("%d", &n);
+
+    int mang[100];
+    int i;
+    for (i = 0; i < n; i++) {
+        printf("Nhap mang[%d]: ", i);
+        scanf("%d", &mang[i]);
+    }
+    int max = mang[0];
+    int min = mang[0];
+
+    for (i = 0; i < n; i++) {
+        if (mang[i] > max)
+            max = mang[i];
+        if (mang[i] < min)
+            min = mang[i];
+    }
+    printf("Gia tri lon nhat: %d\n", max);
+    printf("Gia tri nho nhat: %d\n", min);
+
+    return 0;
 }
+
 
 // Debug/Run chuong trinh: bam "F5" hoac "Debug > Start Debugging" tren menu
 
