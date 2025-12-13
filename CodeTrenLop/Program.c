@@ -187,6 +187,69 @@ int main()
 		}
 	} while (chonChucNang != 0);
 }
+int main()
+{
+	int chon;
+	do
+	{
+		printf("///menu///\n");
+		printf("1.thong Tin gia dinh\n");
+		printf("2.so Chia het cho 5\n");
+		printf("3.thong Tin sinh vien lap trinh\n");
+		printf("0.thoat\n");
+		printf("nhap lua chon");
+		scanf("%d", &chon);
+		switch (chon)
+		{
+		case 1:thongTingiadinh();
+			break;
+		case 2:soChiahetcho5();
+			break;
+		case 3:thongTinsinhvienlaptrinh();
+			break;
+		case 0:printf("thoat chuong trinh");
+			break;
+		default:printf("lua chon khong hop le");
+		}
+	} while (chon != 0);
+}
+void thongTingiadinh()
+{
+	printf("nhap ten cua nguoi thu 1:");
+	char ten[30];
+	scanf("%s", ten);
+	printf("nhap tuoi cua nguoi thu 1:");
+	int tuoi = 0; {};
+	scanf("%d", tuoi);
+	printf("ten cua nguoi thu 1 la:%s\n", ten);
+	printf("tuoi cua nguoi thu 1 la:%d\n", tuoi);
+
+	printf("nhap ten cua nguoi thu 2:");
+	char ten2[30];
+	scanf("%s", ten2);
+	printf("nhap tuoi cua nguoi thu 2:");
+	int tuoi2 = 0; {};
+	scanf("%d", tuoi2);
+	printf("ten cua nguoi thu 2 la:%s\n", ten2);
+	printf("tuoi cua nguoi thu 2 la:%d\n", tuoi2);
+}
+void soChiahetcho5()
+{
+	printf("nhap so can kiem tra:");
+	scanf("%d");
+}
+void thongTinsinhvienlaptrinh()
+{
+	printf("nhap ten sinh vien:");
+	char tenSV[30];
+	scanf("%s", tenSV);
+	printf("nhap tuoi sinh vien:");
+	int tuoiSV = 0; {};
+	scanf("%d", tuoiSV);
+	printf("ten sinh vien la:%s\n, tenSV");
+	printf("tuoi sinh vien la:%d\n, tuoiSV");
+}
+
 
 
 // GV: AnhTT184
